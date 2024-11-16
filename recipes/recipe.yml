@@ -5,13 +5,6 @@ base-image: quay.io/fedora/fedora-iot
 image-version: latest
 
 modules:
-  #- type: script
-  #  scripts:
-  #    - prepare_groupinstall.sh
-  - type: script
-    scripts:
-      #- groupinstall.sh
-      - download_install_rpms.sh
   - type: files
     files:
       - source: system
@@ -22,6 +15,7 @@ modules:
     keys:
        - https://download.docker.com/linux/fedora/gpg
     install:
+      - wget
       - usbguard
       - zsh
       - libvirt
