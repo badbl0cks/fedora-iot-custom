@@ -9,56 +9,44 @@ modules:
     files:
       - source: system
         destination: /
-  - type: rpm-ostree
-    repos:
-       - https://download.docker.com/linux/fedora/docker-ce.repo
-    keys:
-       - https://download.docker.com/linux/fedora/gpg
-    install:
-      - wget
-      - usbguard
-      - zsh
-      - libvirt
-      - virt-manager
-      - autofs
-      - wireguard-tools
-      - trash-cli
-      - git
-      - git-credential-libsecret
-      - firewall-config
-      - htop
-      - glances
-      - ansible
-      - docker-ce
-      - docker-ce-cli
-      - containerd.io
-      - docker-buildx-plugin
-      - docker-compose-plugin
-      - cockpit
-      - cockpit-navigator
-      - cockpit-composer
-      - cockpit-files
-      - cockpit-machines
-      - cockpit-networkmanager
-      - cockpit-ostree
-      - cockpit-podman
-      - cockpit-selinux
-      - cockpit-sosreport
-      - cockpit-storaged
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - FiraCode # don't add spaces or "Nerd Font" suffix.
-        - Hack
-        - SourceCodePro
-        - Terminus
-        - JetBrainsMono
-        - NerdFontsSymbolsOnly
-      google-fonts:
-        - Roboto
-        - Open Sans
-  - type: systemd
-    system:
-      enabled:
-        - docker.service
+#  - type: rpm-ostree
+#    repos:
+#       - https://download.docker.com/linux/fedora/docker-ce.repo
+#    keys:
+#       - https://download.docker.com/linux/fedora/gpg
+#    install:
+#      - wget
+#      - usbguard
+#      - zsh
+#      - libvirt
+#      - virt-manager
+#      - autofs
+#      - wireguard-tools
+#      - trash-cli
+#      - git
+#      - git-credential-libsecret
+#      - firewall-config
+#      - htop
+#      - glances
+#      - ansible
+#      - docker-ce
+#      - docker-ce-cli
+#      - containerd.io
+#      - docker-buildx-plugin
+#      - docker-compose-plugin
+#      - cockpit
+#      - cockpit-navigator
+#      - cockpit-composer
+#      - cockpit-files
+#      - cockpit-machines
+#      - cockpit-networkmanager
+#      - cockpit-ostree
+#      - cockpit-podman
+#      - cockpit-selinux
+#      - cockpit-sosreport
+#      - cockpit-storaged
+ # - type: systemd
+ #   system:
+ #     enabled:
+ #       - docker.service
   - type: signing # sets up the proper policy & signing files for signed images to work fully
